@@ -1,12 +1,12 @@
-files.cpp = main.cpp Bureucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+files.cpp = main.cpp Bureucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 
-files.hpp = Bureucrat.hpp Form.hpp
+files.hpp = Bureucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
 
 CFLAGS = -Wall -Wextra -Werror
 
 files.o = $(files.cpp:.cpp=.o)
 
-NAME = FormOrgy
+NAME = Intern
 
 all : $(NAME)
 
