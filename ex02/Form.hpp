@@ -26,11 +26,7 @@ public :
 	int getExecGrade() const;
 	Form& operator=(const Form &second);
 	void beSigned(const Bureucrat& bureucrat);
-	bool beExecuted(const Bureucrat& bureucrat);
-
-
-
-
+	virtual bool beExecuted(const Bureucrat& bureucrat) const = 0;
 
    	class GradeTooHighException : public std::exception{
 	public :

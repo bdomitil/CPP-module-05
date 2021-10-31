@@ -1,4 +1,4 @@
-files.cpp = main.cpp Bureucrat.cpp Form.cpp
+files.cpp = main.cpp Bureucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 files.hpp = Bureucrat.hpp Form.hpp
 

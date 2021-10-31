@@ -1,46 +1,32 @@
 #include "Bureucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 
 int main()
 {
 // FAIL ZONE
-	try
-	{
-		 Bureucrat bur("Fail", 0);
-	}
-	catch(exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+Bureucrat highBur("Senior", 5);
+Bureucrat middleBur("Middle", 74);
+Bureucrat lowBur("Junior", 148);
+ShrubberyCreationForm shru("shruForm");
+RobotomyRequestForm robo("roboForm");
+PresidentialPardonForm pres("preForm");
 
-	try 
-	{				
-		std::cout << std::endl << std::endl;
-		Bureucrat crat("Mike", 140);
-		Form form ("Dosye", 12, 11);
-		crat.execForm(form);
-		crat.signForm(form);
-		std::cout << crat << std::endl;
-		std::cout << form << std::endl;
-	}
-	catch (exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+try
+{
+	shru.beSigned(highBur);
+	shru.beExecuted(highBur);
+	robo.beSigned(highBur);
+	robo.beExecuted(highBur);
+	pres.beSigned(highBur);
+	pres.beExecuted(highBur);
+}
+catch(const std::exception& e)
+{
+	std::cerr << e.what() << '\n';
+}
 
-//WORKING ZONE
-	try
-	{
-		std::cout << std::endl << std::endl;
-		Bureucrat bur("Johny", 1);
-		Form form("Deklaration", 2, 3);
-		bur.signForm(form);
-		bur.execForm(form);
-		std::cout << bur << std::endl;
-		std::cout << form << std::endl;
-	}
-	catch(exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
+
 }

@@ -41,19 +41,13 @@ bool Form ::  getStatus() const
 void Form :: beSigned(const Bureucrat &bueracrat) 
 {
 	if (bueracrat.getGrade() <= _signGrade)
+	{
 		_signed = true;
+		std::cout << _name << " is successfully signed" << std::endl;
+	}
 	else
 		throw GradeTooLowException();
 }
-
-bool Form :: beExecuted(const Bureucrat &bueracrat) 
-{
-	if (bueracrat.getGrade() <= _execGrade)
-		return true;
-	else
-		throw Form :: GradeTooLowException();
-}
-
 
 const char* Form :: GradeTooHighException ::  what(void) const throw ()
 {
